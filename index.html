@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resurrection City Template</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="logo-title">
+            <a href="#">
+                <img src="assets/icons/Tent_Icon.png" alt="">
+                <span>Resurrection City</span>
+            </a>
+        </div>
+
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Imagining</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Planning & Building</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Living & Leaving</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Afterlives</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+        </ul>
+    </nav>
+    <!--End Navbar-->
+
+    <!--Side Panel-->
+
+    <div id="panel-btn" class="panel-btn">
+        <i class="fa-solid fa-lightbulb"></i>
+    </div>
+
+    <div class="side-panel">
+        <div class="title-close">
+            <div class="title-logo">
+                <img src="assets/icons/Tent_Icon.png" alt="">
+                <h3>Planning & Building</h3>
+            </div>        
+            <i id="panel-close" class="fa-solid fa-close"></i>
+        </div>
+        <div class="panel-line"></div>
+        <div class="side-panel-text">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit?</p>
+            <img class="app-image" src="./assets/images/placeholder1.jpg" alt="Aerial View of Resurrection City" data-caption="An aerial image of Resurrection City on the National Mall.">
+            <p>A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+            <img class="app-image" src="./assets/images/placeholder2.jpg" alt="Aerial View of Resurrection City" data-caption="Another aerial image of Resurrection City on the National Mall.">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+        </div>
+    </div>
+
+    <!--End Side Panel-->
+
+    <!--Help Panel-->
+
+    <div id="help-btn" class="help-btn">
+        <i class="fa-solid fa-question"></i>
+    </div>
+
+    <div id="help-panel" class="help-panel">
+        <div class="title-close">
+            <div class="title-logo">
+                <img src="assets/icons/Tent_Icon.png" alt="">
+                <h3>Using the App</h3>
+            </div>
+            <i id="help-close" class="fa-solid fa-close"></i>
+        </div>
+        <div class="panel-line"></div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+    </div>
+
+    <!--End Help Panel-->
+
+    <!--Popup-->
+
+    <div class="popup" id="cardId">
+        <img src="" alt="Map popup image" class="app-image" id="cardImageId" data="hello">
+        <div class="panel-line"></div>
+        <div class="city-state">
+            <h4 id="popCityState"></h4><span id="popDate">Date</span>
+        </div>
+        <p id="popNotes">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi commodi soluta fugit sequi corrupti voluptatibus ipsam, enim expedita ad aliquid eum, officiis magnam reprehenderit. Reprehenderit, aliquid voluptatibus. Ratione, amet quis! Beatae, magnam animi ipsum dolore aliquid necessitatibus facere impedit ea! Adipisci iusto maiores similique? Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi commodi soluta fugit sequi corrupti voluptatibus ipsam, enim expedita ad aliquid eum, officiis magnam reprehenderit. Reprehenderit, aliquid voluptatibus. Ratione, amet quis! Beatae, magnam animi ipsum dolore aliquid necessitatibus facere impedit ea! Adipisci iusto maiores similique?"</p>
+    </div>
+
+    <!--End Popup-->
+
+    <!--About Modal-->
+
+    <div class="modal-container" id="about-modal">
+        <div class="modal-inner">
+            <a href="#" class="modal-close" id="modal-close">
+                <i class="fa-solid fa-close"></i>
+            </a>
+            <h3>About the Project</h3>
+            <div class="panel-line"></div>
+            <div class="modal-about-text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam cum maiores veritatis necessitatibus exercitationem magni itaque culpa molestiae nemo cupiditate sint, ad, numquam, quidem ut. Dicta accusantium eum temporibus sunt neque illum iste, aliquam atque cumque quis ea? Labore distinctio dolor architecto animi exercitationem suscipit? A delectus laboriosam, aperiam impedit voluptates excepturi suscipit illo quibusdam similique ducimus, placeat animi ab dignissimos harum, sit quis. Necessitatibus quaerat minus non quia totam, est asperiores temporibus ea earum delectus nostrum ex, libero, magni iusto? Explicabo sint repellendus error mollitia dicta assumenda. Repellat laudantium nobis quae corrupti officiis numquam alias ad molestiae illo! Laborum.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--End About Modal-->
+
+    <!--Picture Modal-->
+
+    <div class="modal-container" id="img-modal">
+        <div class="modal-inner">
+            <a href="#" class="modal-close" id="img-close">
+                <i class="fa-solid fa-close"></i>
+            </a>
+            <img id="neatModalImg" src="" alt="" data="">
+            <span id="img-caption"></span>
+        </div>
+    </div>
+
+    <!--End Picture Modal-->
+
+    <div id="viewDiv"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://js.arcgis.com/4.32/"></script>
+    <script src="/script/renderers.js"></script>
+    <script src="/script/script.js"></script>
+</body>
+</html>
