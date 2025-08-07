@@ -47,7 +47,7 @@ $('#help-close').click(function(){
 
 /***Start ArcGIS JS***/
 
-require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer"], (SceneView, WebScene, FeatureLayer) => {
+require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer", "esri/layers/TileLayer"], (SceneView, WebScene, FeatureLayer, TileLayer) => {
 
     /***Add Layers***/
 
@@ -58,21 +58,20 @@ require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer"], (
       renderer: cityRenderer
     })
 
+    const baseMap = new TileLayer({
+      url: "https://tiles.arcgis.com/tiles/njxlOVQKvDzk10uN/arcgis/rest/services/AAA_National_Highway_Map/MapServer",
+      opacity: 0.7
+    })
+
     /***Create Map and View***/
 
     const map = new WebScene({
-        basemap: "topo-3d",
-        ground: "world-elevation",
-        layers: [cities],
+        //basemap: "topo-3d",
+        // ground: "world-elevation",
+        layers: [baseMap, cities],
     });
 
-    // const customHighlight = {
-    //   color: [252, 132, 3],
-    //   fillOpacity: 0.4,
-    //   haloOpacity: 0.8,
-    //   haloColor: [66, 34, 140],
-    //   shadowOpacity: 0.2
-    // }    
+    map.ground.opacity = 0;
 
     const view = new SceneView({
         container: "viewDiv",
@@ -81,18 +80,32 @@ require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer"], (
         highlights: [
           {name: "custom", color: "#649b92", haloColor: "#649b92", haloOpacity: 0.9, fillOpacity: 0.5, shadowOpacity: 0.2}
         ],
+        environment: {
+          background:{
+              type: "color", 
+              color: [244, 245, 240, 1]
+          },
+          atmosphereEnabled: false,
+          starsEnabled: false
+        },
+        constraints: {
+          altitude: {
+            min: 1500000,
+            max: 8000000
+          }
+        },
         camera: {
           position: {
-            spatialReference: {
-              latestWkid: 3857,
-              wkid: 102100
-            },
-            x: -10958895.27999855,
-            y: 4655064.762861561,
-            z: 5358344.169864016
+            // spatialReference: {
+            //   latestWkid: 3857,
+            //   wkid: 2857
+            // },
+            x: -97.3497654896104,
+            y: 38.938391919294915,
+            z: 7783963.6349063385
           },
-          heading: 2.122359174463156,
-          tilt: 0.27174524597590394
+          heading: 359.627264859108,
+          tilt: 0.22518567955045343
         },
         ui: {
             components: []
@@ -108,10 +121,6 @@ require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer"], (
     let notes = document.getElementById('popNotes');
 
     let highlight;
-    // let currentGraphic;
-    // let countNumber = 0;
-
-    
 
     view.on("immediate-click", (event) => {
       view.hitTest(event).then((hitResult) => {
@@ -153,5 +162,6 @@ require(["esri/views/SceneView", "esri/WebScene", "esri/layers/FeatureLayer"], (
     })
 
     /***End HitTest Functionality***/
+
 
 });
